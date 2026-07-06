@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import { psLoginPage } from './pageobjectModel/psloginpagePOM.js';
 import { psRegistrationPage } from './pageobjectModel/psregistrationpagePOM.js';
 import { psHomePage } from './pageobjectModel/pshomepage.js';
+import { pscheckout } from './pageobjectModel/pscheckoutPOM.js';
 import { faker } from '@faker-js/faker';
 
 
@@ -11,6 +12,7 @@ test('end to end flow practice site', async ({ page }) => {
   const objLoginPage = new psLoginPage(page);
   const objregistrationPage = new psRegistrationPage(page);
   const objHomePage = new psHomePage(page);
+  const objcheckoutpage =new pscheckout(page)
   const email = faker.internet.email();
 
 
@@ -71,9 +73,20 @@ test('end to end flow practice site', async ({ page }) => {
 
   await objHomePage.click_home_link();
   await objHomePage.click_ONCart();
+  await page.waitForTimeout(5000);
+  
+  await objcheckoutpage.verifyProtectiveGlovesDisplayed();
+  await objcheckoutpage.click_checkout_button();
+  await objcheckoutpage.click_checkout_button();
+  await page.waitForTimeout(2000);
+  await objcheckoutpage.enter_house_Number('22');
+  await page.waitForTimeout(2000);
+  await objcheckoutpage.click_checkout_button();
+  await objcheckoutpage.select_payment_method();
+  await objcheckoutpage.click_confirm_button();
+  await objcheckoutpage.verify_payment_successful_message();
 
-
-  await page.waitForTimeout(1000);
+  await page.waitForTimeout(2000);
 
   //await page.pause();
 
