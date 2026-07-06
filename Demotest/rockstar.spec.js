@@ -71,5 +71,5 @@ test('Add product to cart', async ({ page }) => {
   await expect(await objlogoutPage.txt_password).toBeVisible();  // // verify text in login page Password for all users:
 
 
-  await page.waitForTimeout(5000);
+  await page.waitForTimeout(3000);
 });
