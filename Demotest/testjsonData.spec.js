@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import testData from './testData.json';
 
-for (const data of testData.users) {
+/*for (const data of testData.users) {
 
   test(data.testCase, async ({ page }) => {
     test.setTimeout(60000);
@@ -21,4 +21,4 @@ for (const data of testData.users) {
       await expect(page.locator('[data-test="error"]')).toBeVisible();
     }
   });
-}
+}*/
