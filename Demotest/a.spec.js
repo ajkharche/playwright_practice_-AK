@@ -20,6 +20,6 @@ test('Shopping Cart Validation', async ({ page }) => {
 
     await cart.addBlackTshirt();
 
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(3000);
 
 });
