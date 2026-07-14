@@ -55,4 +55,30 @@ export class pscheckout {
 async verify_payment_successful_message() {
     await expect(this.verifypm).toBeVisible();
 }
+
+   async verify_page_tittle_thor_hammer()
+{
+    await expect(this.page).toHaveTitle('Thor Hammer - Practice Software Testing - Toolshop - v5.0');
+}
+
+   async verify_page_tittle_Protective_Gloves()
+{
+    await expect(this.page).toHaveTitle('Protective Gloves - Practice Software Testing - Toolshop - v5.0');
+}
+
+   async verify_page_tittle_Sheet_Sander()
+{
+    await expect(this.page).toHaveTitle('Sheet Sander - Practice Software Testing - Toolshop - v5.0');
+}
+
+   async verify_cart_title()
+{
+    await expect(this.page).toHaveTitle('Checkout - Practice Software Testing - Toolshop - v5.0');
+}
+   async verify_cart_url()
+{
+    await expect(this.page).toHaveURL('https://practicesoftwaretesting.com/checkout');
+}
+
+
 }

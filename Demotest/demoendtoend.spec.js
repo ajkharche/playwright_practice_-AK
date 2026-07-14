@@ -47,6 +47,7 @@ test('end to end flow practice site', async ({ page }) => {
   await objHomePage.click_search_button();
   await page.waitForTimeout(2000);
   await objHomePage.click_product();
+  await objcheckoutpage.verify_page_tittle_thor_hammer();
   await objHomePage.click_addtocart_button();
   await page.waitForTimeout(3000);
   await objHomePage.click_home_link();
@@ -56,6 +57,7 @@ test('end to end flow practice site', async ({ page }) => {
   await objHomePage.click_search_button();
   await page.waitForTimeout(3000);
   await objHomePage.click_Protective_Gloves();
+  await objcheckoutpage.verify_page_tittle_Protective_Gloves();
   //await objHomePage.click_addtocart1();
   await objHomePage.click_addtocart_button();
   await page.waitForTimeout(3000);
@@ -65,6 +67,7 @@ test('end to end flow practice site', async ({ page }) => {
   await objHomePage.click_search_button();
   await page.waitForTimeout(2000);
   await objHomePage.click_product();
+  await objcheckoutpage.verify_page_tittle_Sheet_Sander();
   //await objHomePage.click_addtocart1();
   await objHomePage.click_addtocart_button();
   await page.waitForTimeout(3000);
@@ -73,15 +76,17 @@ test('end to end flow practice site', async ({ page }) => {
 
   await objHomePage.click_home_link();
   await objHomePage.click_ONCart();
+  await objcheckoutpage.verify_cart_title();
   await page.waitForTimeout(5000);
   
   await objcheckoutpage.verifyProtectiveGlovesDisplayed();
   await objcheckoutpage.click_checkout_button();
   await objcheckoutpage.click_checkout_button();
   await page.waitForTimeout(2000);
-  await objcheckoutpage.enter_house_Number('22');
+  await objcheckoutpage.enter_house_Number('23');
   await page.waitForTimeout(2000);
   await objcheckoutpage.click_checkout_button();
+  await objcheckoutpage.verify_cart_url();
   await objcheckoutpage.select_payment_method();
   await objcheckoutpage.click_confirm_button();
   await objcheckoutpage.verify_payment_successful_message();
