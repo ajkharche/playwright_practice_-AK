@@ -9,11 +9,12 @@ export class ShoppingCartPage {
         this.removeBtn = page.getByRole('button', { name: 'X' });
     }
 
-    async navigate() {
+    async navigate(){
+
         await this.page.goto('https://react-shopping-cart-67954.firebaseapp.com/');
     }
 
-    async addFirstProduct() {
+    async CroppedStayGroovyoffwhite() {
 
         await expect(this.page.getByText('Cropped Stay Groovy off white')).toBeVisible();
 

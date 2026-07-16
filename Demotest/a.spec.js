@@ -8,7 +8,7 @@ test('Shopping Cart Validation', async ({ page }) => {
 
     await cart.navigate();
 
-    await cart.addFirstProduct();
+    await cart.CroppedStayGroovyoffwhite();
 
     await cart.addBatmanProduct();
 

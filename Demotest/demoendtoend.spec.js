@@ -38,7 +38,7 @@ test('end to end flow practice site', async ({ page }) => {
   await objLoginPage.user_enter_emailadd(email);
   await objLoginPage.user_enter_password('Welcome@656575152');
   await objLoginPage.click_login_button();
-  await page.waitForTimeout(6000);
+  //await page.waitForTimeout(6000);
   
   await page.waitForTimeout(3000);
   await objHomePage.click_home_link();
@@ -71,8 +71,7 @@ test('end to end flow practice site', async ({ page }) => {
   //await objHomePage.click_addtocart1();
   await objHomePage.click_addtocart_button();
   await page.waitForTimeout(3000);
-  //await page.waitForTimeout(1000);
-  //await page.pause();
+  
 
   await objHomePage.click_home_link();
   await objHomePage.click_ONCart();
@@ -91,7 +90,7 @@ test('end to end flow practice site', async ({ page }) => {
   await objcheckoutpage.click_confirm_button();
   await objcheckoutpage.verify_payment_successful_message();
 
-  await page.waitForTimeout(2000);
+  //await page.waitForTimeout(2000);
 
   //await page.pause();
 
