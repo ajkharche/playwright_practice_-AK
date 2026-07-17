@@ -4,6 +4,7 @@ import testData from '../../Data/TestData.json';
 
 test.describe('Shopping Cart Product Verification', () => {
 
+
   test('Verify displayed product prices are between $10.90 and $14.90', async ({ page }) => {
 
     const shoppingPage = new ShoppingPage(page);

@@ -9,6 +9,7 @@ readonly cartItems: Locator;
 readonly cartDrawer: Locator;
 readonly openCartButton: Locator;
 
+
 constructor(page: Page) {
 this.page = page;
 this.productPrices = page.locator('//p[small[text()="$"]]');
